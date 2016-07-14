@@ -233,3 +233,13 @@ body{
 .jailTime {
     background-image:url(../images/mysad.jpg);
 }
+
+.player.broke {
+    display: none;
+}
+
+.cashBook {
+    height: 50px;
+    width: 50px;
+    background-color: #aae0fa;
+}
