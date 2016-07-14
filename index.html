@@ -163,7 +163,7 @@
                         <div id="intro" class="popup-page" style="display:none;">
                                 <div class="popup-title">Welcome to Monopoly</div>
                                 <div class="popup-content">Please choose how many players?<br /><input id="num-of-players" type="text"><button class="clickable">START</button><br>
-                                <div class="invalid-error" >Number of players must be between 1 and 4</div></div>
+                                <div class="invalid-error" >Number of players must be between 2 and 4</div></div>
                         </div>
                         <div id="buy" class="popup-page" style="display:none;">
                                 <div class="popup-title">This cell is available for sale!</div>
@@ -176,31 +176,40 @@
                         <div id="jail" class="popup-page" style="display:none;">
                                 <div class="popup-title">Go to Jail!</div>
                                 <div class="popup-content">You miss 3 turns<br />
-                                         <button id="ok" class="clickable">Bummer</button>
+                                         <button  class="clickable">Bummer</button>
                                 </div>
                         </div>
                         <div id="pay" class="popup-page" style="display:none;">
                                 <div class="popup-title">Pay up</div>
                                 <div class="popup-content">This property belongs to <span id="player-placeholder"></span><br>
                                         You should pay him <span id="amount-placeholder"></span><br />
-                                        <button id="ok" class="clickable">:-(</button>
+                                        <button class="clickable">:-(</button>
                                 </div>
                         </div>
                         <div id="chance" class="popup-page" style="display:none;">
                                 <div class="popup-title"></div>
                                 <div class="popup-content">
-                                        <div id="text-placeholder"></div>
-                                        <button id="ok" class="clickable">OK</button>
+                                        <div class="text-placeholder"></div>
+                                        <button class="clickable">OK</button>
                                 </div>
                         </div>
                         <div id="community" class="popup-page" style="display:none;">
                                 <div class="popup-title"></div>
                                 <div class="popup-content">
-                                        <div id="text-placeholder"></div>
-                                        <button id="ok" class="clickable">OK</button>
+                                        <div class="text-placeholder"></div>
+                                        <button class="clickable">OK</button>
                                 </div>
                         </div>
+
+                        <div id="bankrupcy" class="popup-page" style="display:none;">
+                        <div class="popup-title">Oooops... someone is broke</div>
+                        <div class="popup-content">
+                                <div class="text-placeholder">Sorry dude, you're out of this game. bye!</div>
+                                <button class="clickable">OK</button>
+                        </div>
+                </div>
                 </div>
         </div>
         </div>
+    </body>
 </html>

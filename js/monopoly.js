@@ -1,6 +1,6 @@
 var Monopoly = {};
 Monopoly.allowRoll = true;
-Monopoly.moneyAtStart = 50;
+Monopoly.moneyAtStart = 10;
 Monopoly.doubleCounter = 0;
 
 Monopoly.init = function(){
@@ -44,7 +44,9 @@ Monopoly.updatePlayersMoney = function(player,amount){
     var playersMoney = parseInt(player.attr("data-money"));
     playersMoney -= amount;
     if (playersMoney < 0 ){
-        alert("you are broke!")
+        // alert("you are broke!");
+        console.log("bankrupt");
+        Monopoly.showPopup("#bankrupcy");
     }
     player.attr("data-money",playersMoney);
     player.attr("title",player.attr("id") + ": $" + playersMoney);
@@ -171,7 +173,7 @@ Monopoly.handleChanceCard = function(player){
     var popup = Monopoly.getPopup("chance");
     popup.find(".popup-content").addClass("loading-state");
     $.get("https://itcmonopoly.appspot.com/get_random_chance_card", function(chanceJson){
-        popup.find(".popup-content #text-placeholder").text(chanceJson["content"]);
+        popup.find(".popup-content .text-placeholder").text(chanceJson["content"]);
         popup.find(".popup-title").text(chanceJson["title"]);
         popup.find(".popup-content").removeClass("loading-state");
         popup.find(".popup-content button").attr("data-action",chanceJson["action"]).attr("data-amount",chanceJson["amount"]);
