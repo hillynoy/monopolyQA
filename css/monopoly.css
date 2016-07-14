@@ -171,6 +171,9 @@ body{
     height: 25%;
     border-radius:20px;
     display:inline-block;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
 }
 
 .bottom.game.cell:not(.corner) .player , .top.game.cell:not(.corner) .player{
@@ -221,4 +224,12 @@ body{
 
 .dice-dot.right{
     margin-left:36%;
+}
+
+.myProperty {
+    background-image:url(../images/smile.png);
+}
+
+.jailTime {
+    background-image:url(../images/mysad.jpg);
 }
