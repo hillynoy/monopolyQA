@@ -396,3 +396,4 @@ Monopoly.showPopup = function(popupId){
 };
 
 Monopoly.init();
+//
